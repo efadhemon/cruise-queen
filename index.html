@@ -117,7 +117,7 @@
 
             <h1 class="welcome">Welcome To Our Trip</h1>
 
-            <h2>Sir, You Have Taken <span id="show-fist-class-ticket"></span> Fist Class Ticket.</h2>
+            <h2>Sir, You Have Taken <span id="show-fist-class-ticket"></span> First Class Ticket.</h2>
             <h2>And</h2>
             <h2>You Have Taken <span id="show-economy-ticket"></span> Economy Ticket.</h2>
 
@@ -193,15 +193,12 @@
             bookingForm.style.visibility = 'hidden';
 
             const firstClassTicketCount = document.getElementById('firstClass-ticketCount').value;
-            const firstClassTicketNumber = parseInt(firstClassTicketCount);
             const economyTicketCount = document.getElementById('economy-ticketCount').value;
-            economyTicketNumber = parseInt(economyTicketCount);
 
             document.getElementById('show-fist-class-ticket').innerText = firstClassTicketCount;
             document.getElementById('show-economy-ticket').innerText = economyTicketCount;
 
-            const totalPrice = (150 * firstClassTicketNumber + economyTicketCount * 100) + (150 * firstClassTicketNumber + economyTicketCount * 100) * 0.1;
-
+            const totalPrice = document.getElementById('total').innerHTML;
             document.getElementById('show-total-price').innerText = '$ ' + totalPrice;
 
             const showBookingInfo = document.getElementById('show-booking-info');
